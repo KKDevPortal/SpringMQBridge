@@ -1,5 +1,6 @@
 com/kkdevportal/SpringMQBridge/dto/OrderStatus.class
-com/kkdevportal/SpringMQBridge/dto/Order.class
-com/kkdevportal/SpringMQBridge/config/MessagingConfig.class
 com/kkdevportal/SpringMQBridge/SpringMqBridgeApplication.class
 com/kkdevportal/SpringMQBridge/publisher/OrderPublisher.class
+com/kkdevportal/SpringMQBridge/consumer/Resturent.class
+com/kkdevportal/SpringMQBridge/dto/Order.class
+com/kkdevportal/SpringMQBridge/config/MessagingConfig.class
