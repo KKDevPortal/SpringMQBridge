@@ -1,20 +1,20 @@
 # SpringMQBridge
-A bridge between Spring Boot and RabbitMQ
 
-# 🛠️ Project Features
-- Publish messages via REST API
-- Publish messages via a Thymeleaf-based MVC form
-- Consume messages from a RabbitMQ queue
-- Easily extensible for fanout, topic, and direct exchanges
+A simple Spring Boot project demonstrating RabbitMQ messaging via REST API and MVC web interface.
 
-# Technologies Used
+## 🔧 Features
+
+- Publish messages using REST API (`/api/messages`)
+- Send messages using a Thymeleaf web form (`/form`)
+- Listen to a RabbitMQ queue and log received messages
+- Built with Spring Boot and RabbitMQ
+
+## 🧰 Technologies
+
 - Java 17+
 - Spring Boot 3.x
-- RabbitMQ (AMQP)
+- RabbitMQ
 - Spring AMQP
-- Spring Web (REST)
-- Spring MVC + Thymeleaf
-- Maven
-- Docker (optional for RabbitMQ)
+- Thymeleaf
+- Docker (for RabbitMQ setup)
 
-  
