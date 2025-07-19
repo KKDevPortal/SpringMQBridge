@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 /**
 * Flow Summary:
-* Queue: devportal_queue → Where messages land.
-* Exchange: devportal_exchange → Directs messages to queues.
+* Queue: order queue → Where messages land.
+* Exchange: restur_order_exchange → Directs messages to queues.
 * Binding: Ties the exchange and queue using devportal_key.
 * RabbitTemplate: Used in your service to send messages to the exchange.
 * JSON Converter: Ensures automatic conversion between Java objects and JSON.
@@ -20,8 +20,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration // Marks this class as a Spring configuration class
 public class MessagingConfig {
     // Constants for queue, exchange, and routing key names
-    public static final String QUEUE = "devportal_queue";
-    public static final String TOPICEXCHANGE = "devportal_exchange";
+    public static final String QUEUE = "order";
+    public static final String TOPICEXCHANGE = "restur_order_exchange";
     public static final String ROUTINGKEY = "devportal_key";
 
     /**
@@ -30,7 +30,7 @@ public class MessagingConfig {
      */
     @Bean
     public Queue queue() {
-        return new Queue(QUEUE); // Creates a non-durable queue named 'devportal_queue'
+        return new Queue(QUEUE); // Creates a non-durable queue named 'order'
     }
 
     /**
@@ -39,7 +39,7 @@ public class MessagingConfig {
      */
     @Bean
     public TopicExchange topicExchange() {
-        return new TopicExchange(TOPICEXCHANGE); // Creates a topic exchange named 'devportal_exchange'
+        return new TopicExchange(TOPICEXCHANGE); // Creates a topic exchange named 'restur_order_exchange'
     }
 
     /**
